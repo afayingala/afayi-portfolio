@@ -1,0 +1,119 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: #0D0D0D;
+  --surface: #141414;
+  --surface2: #1A1A1A;
+  --border: #2A2A2A;
+  --text: #F5F0E8;
+  --muted: #7A7A7A;
+  --accent: #C9A96E;
+  --accent2: #8B7355;
+}
+
+@layer base {
+  *, *::before, *::after { box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background-color: var(--bg);
+    color: var(--text);
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 300;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  ::selection {
+    background: var(--accent);
+    color: var(--bg);
+  }
+}
+
+/* ── Page-load hero animations ────────────────────── */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.hero-fade {
+  opacity: 0;
+  animation: fadeUp 0.9s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* ── Scroll-reveal ─────────────────────────────────── */
+.reveal {
+  opacity: 0;
+  transform: translateY(22px);
+  transition: opacity 0.75s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.75s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ── Photo float ───────────────────────────────────── */
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50%       { transform: translateY(-8px); }
+}
+.photo-float { animation: float 5s ease-in-out infinite; }
+
+/* ── Nav underline slide ───────────────────────────── */
+.nav-link {
+  position: relative;
+  color: var(--muted);
+  font-family: 'DM Sans', sans-serif;
+  font-size: 11px;
+  font-weight: 400;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  transition: color 0.2s;
+}
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: var(--accent);
+  transition: width 0.25s ease;
+}
+.nav-link:hover { color: var(--text); }
+.nav-link:hover::after,
+.nav-link.active::after { width: 100%; }
+.nav-link.active { color: var(--text); }
+
+/* ── Arrow slide on hover ──────────────────────────── */
+.arrow-link { display: inline-flex; align-items: center; gap: 6px; }
+.arrow-link .arrow { display: inline-block; transition: transform 0.2s; }
+.arrow-link:hover .arrow { transform: translateX(4px); }
+
+/* ── Gallery grayscale ─────────────────────────────── */
+.gallery-img {
+  filter: grayscale(40%);
+  transition: filter 0.5s, transform 0.5s;
+}
+.gallery-img:hover {
+  filter: grayscale(0%);
+  transform: scale(1.03);
+}
+
+/* ── Card hover ────────────────────────────────────── */
+.project-card {
+  background: var(--bg);
+  transition: background 0.2s;
+}
+.project-card:hover { background: var(--surface); }
+
+/* ── Pulsing dot ───────────────────────────────────── */
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0.4; }
+}
+.pulse-dot { animation: pulse 2s ease-in-out infinite; }
