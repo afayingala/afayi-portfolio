@@ -67,7 +67,7 @@ export default function Hero() {
                 View Work
               </button>
               <a
-                href="/resume.pdf"
+                href="/newresume.pdf"
                 download
                 style={{ fontFamily: '"DM Sans"', fontWeight: 300, fontSize: '11px', letterSpacing: '0.14em', textTransform: 'uppercase', padding: '11px 24px', border: '1px solid var(--border)', color: 'var(--muted)', textDecoration: 'none', transition: 'color 0.2s, border-color 0.2s', display: 'inline-block' }}
                 onMouseEnter={e => { e.target.style.color = 'var(--text)'; e.target.style.borderColor = 'var(--muted)' }}
