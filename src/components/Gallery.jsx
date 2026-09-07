@@ -3,8 +3,10 @@ import { useReveal } from '../hooks/useReveal'
 
 // Add files to /public and add entries here
 const photos = [
-  { src: '/port.jpg', caption: 'Building things that matter', tag: 'Work' },
-  // TODO: Afayi — add event photos below
+  { src: '/port.jpg', caption: 'Building things that matter', tag: 'Community' },
+  {src: 'IMG_1764.jpeg', caption: 'Final year project Defence', tag: 'Work' },
+  {src: 'IMG_1225.jpeg', caption: 'Walk against sexual violence', tag: 'Community'},
+  {src: '/94B5EA7F-5304-406A-AA4C-EAD1386596DC.png', caption: 'My GA4 business flier', tag: 'Work'},
   // { src: '/oceanhack.jpg', caption: 'Ocean Hack — Organizer & Host', tag: 'Events' },
   // { src: '/gdg-bwa.jpg', caption: 'GDG Build with AI', tag: 'GDG' },
 ]

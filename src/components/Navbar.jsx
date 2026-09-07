@@ -4,6 +4,7 @@ const links = [
   { label: 'About',     href: '#about' },
   { label: 'Projects',  href: '#projects' },
   { label: 'Journey',   href: '#journey' },
+  { label: 'Certifications', href: '#certifications' },
   { label: 'Community', href: '#community' },
   { label: 'Gallery',   href: '#gallery' },
   { label: 'Contact',   href: '#contact' },
@@ -21,7 +22,7 @@ export default function Navbar() {
   }, [])
 
   useEffect(() => {
-    const ids = ['hero', 'about', 'projects', 'journey', 'community', 'gallery', 'contact']
+    const ids = ['hero', 'about', 'projects', 'journey', 'certifications', 'community', 'gallery', 'contact']
     const obs = new IntersectionObserver(
       (entries) => entries.forEach(e => { if (e.isIntersecting) setActive(e.target.id) }),
       { rootMargin: '-40% 0px -55% 0px' }

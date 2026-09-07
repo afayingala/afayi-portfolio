@@ -23,8 +23,7 @@ const categoryLabel = {
 
 function YearSection({ year, entries, activeYear }) {
   return (
-    <div style={{ display: 'grid', gridTemplateColumns: '100px 1fr', gap: '3rem' }} className="hidden lg:grid">
-      {/* Sticky year */}
+    <div style={{ display: 'grid', gridTemplateColumns: '100px 1fr', gap: '3rem' }} className="journey-year-section">
       <div>
         <div style={{ position: 'sticky', top: '6rem' }}>
           <span style={{
@@ -37,7 +36,6 @@ function YearSection({ year, entries, activeYear }) {
           </span>
         </div>
       </div>
-      {/* Entries */}
       <div style={{ borderLeft: '1px solid var(--border)', paddingLeft: '2rem', display: 'flex', flexDirection: 'column', gap: '0' }}>
         {entries.map((entry, i) => (
           <TimelineEntry key={`${entry.date}-${i}`} entry={entry} />
@@ -141,8 +139,7 @@ export default function Journey() {
           </h2>
         </div>
 
-        {/* Desktop: two-column with sticky year */}
-        <div className="hidden lg:flex flex-col gap-16">
+        <div className="flex flex-col gap-16">
           {Object.entries(grouped).map(([year, entries]) => (
             <div key={year} data-year={year}>
               <YearSection year={year} entries={entries} activeYear={activeYear} />
@@ -150,12 +147,6 @@ export default function Journey() {
           ))}
         </div>
 
-        {/* Mobile: single column */}
-        <div className="lg:hidden" style={{ borderLeft: '1px solid var(--border)', paddingLeft: '1.5rem', display: 'flex', flexDirection: 'column' }}>
-          {timeline.map((entry, i) => (
-            <TimelineEntry key={`${entry.date}-${i}`} entry={entry} />
-          ))}
-        </div>
       </div>
     </section>
   )

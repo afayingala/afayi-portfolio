@@ -43,7 +43,7 @@ export default function Hero() {
             </div>
 
             <p className="hero-fade" style={{ animationDelay: '240ms', fontFamily: '"DM Sans"', fontWeight: 300, fontSize: '15px', lineHeight: 1.8, color: 'var(--muted)', maxWidth: '400px' }}>
-              Final-year student building systems that matter and communities that last.
+              Recent graduate  building systems that matter and communities that last.
               Based in Buea, Cameroon — the Silicon Mountain.
             </p>
 
@@ -67,7 +67,7 @@ export default function Hero() {
                 View Work
               </button>
               <a
-                href="/newresume.pdf"
+                href="/newresume1.pdf"
                 download
                 style={{ fontFamily: '"DM Sans"', fontWeight: 300, fontSize: '11px', letterSpacing: '0.14em', textTransform: 'uppercase', padding: '11px 24px', border: '1px solid var(--border)', color: 'var(--muted)', textDecoration: 'none', transition: 'color 0.2s, border-color 0.2s', display: 'inline-block' }}
                 onMouseEnter={e => { e.target.style.color = 'var(--text)'; e.target.style.borderColor = 'var(--muted)' }}

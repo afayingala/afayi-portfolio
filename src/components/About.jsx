@@ -58,7 +58,7 @@ function LeftColumn() {
   return (
     <div ref={ref} className={`reveal ${visible ? 'visible' : ''}`} style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
       <p style={{ fontFamily: '"DM Sans"', fontWeight: 300, fontSize: '15px', lineHeight: 1.9, color: 'var(--muted)' }}>
-        I am a software engineering student who believes technology should do more than work — it should matter.
+        I am a software engineering graduate who believes technology should do more than work  it should matter.
         I build full-stack systems, mobile applications, and AI-powered tools, and I love doing it in community with others.
       </p>
       <p style={{ fontFamily: '"DM Sans"', fontWeight: 300, fontSize: '15px', lineHeight: 1.9, color: 'var(--muted)' }}>

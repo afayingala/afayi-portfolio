@@ -81,7 +81,7 @@ export const timeline = [
     current: true
   },
   {
-    date: "2026 — Coming",
+    date: "July 2026",
     category: "achievement",
     title: "Bachelor of Engineering Defense 🎓",
     description: "The big one. Final defense of the Object Tracking Platform project.",

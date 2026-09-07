@@ -117,3 +117,26 @@
   50%       { opacity: 0.4; }
 }
 .pulse-dot { animation: pulse 2s ease-in-out infinite; }
+
+/* ── Responsive journey layout ────────────────────── */
+@media (max-width: 1023px) {
+  .journey-year-section {
+    display: block !important;
+  }
+
+  .journey-year-section > div:first-child {
+    margin-bottom: 1.5rem;
+  }
+
+  .journey-year-section > div:first-child > div {
+    position: static !important;
+  }
+
+  .journey-year-section > div:first-child span {
+    font-size: 2.5rem !important;
+  }
+
+  .journey-year-section > div:last-child {
+    padding-left: 1.5rem !important;
+  }
+}
